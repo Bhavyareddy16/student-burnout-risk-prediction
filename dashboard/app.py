@@ -10,7 +10,7 @@ from sklearn.preprocessing import LabelEncoder
 # -----------------------------
 # Load Dataset (Correct Path)
 # -----------------------------
-df = pd.read_csv("../data/synthetic_student_burnout_data.csv")
+df = pd.read_csv("data/synthetic_student_burnout_data.csv")
 
 # Encode target
 le = LabelEncoder()
@@ -22,7 +22,7 @@ y = df["Burnout_Risk_Level"]
 # -----------------------------
 # Load Pre-Trained Model
 # -----------------------------
-model = joblib.load("burnout_model.pkl")
+model = joblib.load("dashboard/burnout_model.pkl")
 
 # -----------------------------
 # Streamlit UI
