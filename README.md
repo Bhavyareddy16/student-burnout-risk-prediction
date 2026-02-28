@@ -2,6 +2,12 @@
 
 **AI-Powered Behavioural Analytics Framework**
 
+
+
+##  Live Demo  
+https://student-burnout-risk-prediction-z8c3ktsefryzzustloqxhv.streamlit.app/
+
+
 **Problem Statement**
 
 Universities often detect academic decline only after performance drops
