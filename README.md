@@ -125,6 +125,41 @@ Burnout Risk Level was assigned using behavioural thresholds:
 -   Stable behavioural and academic performance
 
 **Model Selection**
+Model Training and Evaluation
+
+Multiple machine learning algorithms were evaluated to determine the most suitable model for predicting student burnout risk. The models were trained on the behavioural dataset and evaluated using Accuracy, Macro Precision, Macro Recall, and Macro F1-score.
+
+Logistic Regression
+
+The Logistic Regression model initially produced a convergence warning during training. To resolve this issue, the max_iter parameter was increased to 5000, allowing the optimization process to converge properly. After adjustment, the model achieved an accuracy of 82.75% (0.8275). While Logistic Regression provides a simple and interpretable baseline model, its performance was lower compared to tree-based ensemble methods due to the nonlinear relationships present in behavioural data.
+
+Decision Tree Classifier
+
+The Decision Tree Classifier performed significantly better than Logistic Regression, achieving an accuracy of 99.00% (0.9900). It also produced strong evaluation metrics with a Macro Precision of 0.9611, Macro Recall of 0.9903, and Macro F1-score of 0.9750. Decision Trees are effective at capturing complex decision boundaries and behavioural rules within structured datasets.
+
+Gradient Boosting Classifier
+
+The Gradient Boosting Classifier also achieved an accuracy of 99.00% (0.9900). It demonstrated excellent classification performance with a Macro Precision of 0.9879, Macro Recall of 0.9607, and Macro F1-score of 0.9734. Gradient Boosting improves predictive accuracy by sequentially combining multiple weak learners into a strong ensemble model.
+
+K-Nearest Neighbors (KNN)
+
+The K-Nearest Neighbors classifier showed the lowest performance among the evaluated models, achieving an accuracy of 80.75% (0.8075). KNN relies heavily on distance calculations and may struggle with structured behavioural data where feature relationships are complex.
+
+Model Comparison
+
+When comparing all models:
+
+Decision Tree and Gradient Boosting achieved the highest accuracy of 99.00% (0.9900).
+
+Random Forest performed very closely with an accuracy of 98.75% (0.9875).
+
+Logistic Regression (82.75%) and KNN (80.75%) showed comparatively lower performance.
+
+Although Decision Tree and Gradient Boosting achieved identical accuracy, the Decision Tree demonstrated a slightly higher Macro Recall (0.9903) and F1-score (0.9750), indicating stronger overall classification balance. In contrast, Gradient Boosting showed slightly higher Macro Precision (0.9879) compared to Decision Tree (0.9611).
+
+Final Model Choice
+
+Despite similar performance among the top models, Random Forest was selected for deployment in the final system. Random Forest provides strong predictive performance while also offering feature importance analysis, which helps identify the most influential behavioural triggers contributing to student burnout risk. This interpretability is crucial for educational decision-making systems.
 
 **Model Used:** Random Forest Classifier
 
